@@ -10,7 +10,7 @@ for i in range(9):
         unique = False
 
 unique2 = True
-for i in range(3):
+for i in range(3): #그룹탐색
     for j in range(3):
         check3 = 0
         for k in range(3):
