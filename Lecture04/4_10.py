@@ -1,17 +1,12 @@
-def solution(sequence, k):
-    answer = []
-    sum_arr = []
-    total = 0
-    for i in range(len(sequence)):
-        total += sequence[i]
-        sum_arr.append(total)
-    for i in range(len(sequence)):
-        j = i
-        while (j < len(sequence)):
-            if j == i and sum_arr[j] == k:
-                return [0, j]
-            elif sum_arr[j] - sum_arr[j - i] == k:
-                return [j - i + 1, j]
-            j += 1
+n = int(input())
+seq = [0] * n
+a = list(map(int, input().split()))
+for i in range(n):
+    cnt = j = 0
+    while (cnt != a[i] or seq[j] != 0):
+        if seq[j] == 0:
+            cnt += 1
+        j += 1
+    seq[j] = i + 1
 
-print(solution([1, 2, 3, 4, 5], 7))
+print(seq)
