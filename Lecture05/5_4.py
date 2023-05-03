@@ -1,5 +1,4 @@
 exp = input()
-res = ''
 stack = []
 for i in exp:
     if i == '*':
