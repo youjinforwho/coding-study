@@ -8,10 +8,10 @@ def DFS(L):
     else:
         for i in range(1, n + 1):
             if ch[i] == 0:
-                ch[i] = 1
+                ch[i] = 1 #체크 켰다
                 res[L] = i
-                DFS(L + 1)
-                ch[i] = 0
+                DFS(L + 1) 
+                ch[i] = 0 #체크 풀었다
 
 if __name__ == "__main__":
     n, m = map(int, input().split())
